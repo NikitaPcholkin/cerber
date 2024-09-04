@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: cerber
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cerber_users
+    username: pcholkin
+    password: 255325aa
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: debug
+      hibernate: debug
